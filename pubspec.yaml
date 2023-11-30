@@ -40,28 +40,28 @@ flavorizr:
       app:
         name: "Prestmit - Dev"
       android:
-        icon: "assets/png/assets/png/pres_icon.png"
+        icon: "assets/png/pres_icon.png"
         applicationId: "dev.com.prestmit"
       ios:
-        icon: "assets/png/assets/png/pres_icon.png"
+        icon: "assets/png/pres_icon.png"
         bundleId: "dev.com.prestmit"
 
     staging:
       app:
         name: "Prestmit - Staging"
       android:
-        icon: "assets/png/assets/png/pres_icon.png"
+        icon: "assets/png/pres_icon.png"
         applicationId: "staging.com.prestmit"
       ios:
-        icon: "assets/png/assets/png/pres_icon.png"
+        icon: "assets/png/pres_icon.png"
         bundleId: "staging.com.prestmit"
 
     production:
       app:
         name: "Prestmit"
       android:
-        icon: "assets/png/assets/png/pres_icon.png"
+        icon: "assets/png/pres_icon.png"
         applicationId: "com.prestmit"
       ios:
-        icon: "assets/png/assets/png/pres_icon.png"
+        icon: "assets/png/pres_icon.png"
         bundleId: "com.prestmit"
