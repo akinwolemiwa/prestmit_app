@@ -27,35 +27,41 @@ flutter:
 
   assets:
     - assets/svg/
-    
-  # fonts:
-  #   - family: Trueno
-  #     fonts:
-  #       - asset: assets/fonts/trueno/TruenoBd.otf
-  #       - asset: assets/fonts/trueno/TruenoBdIt.otf
-  #       - asset: assets/fonts/trueno/TruenoBdOl.otf
-  #       - asset: assets/fonts/trueno/TruenoBdOlIt.otf
-  #       - asset: assets/fonts/trueno/TruenoBlk.otf
-  #       - asset: assets/fonts/trueno/TruenoBlkIt.otf
-  #       - asset: assets/fonts/trueno/TruenoBlkOl.otf
-  #       - asset: assets/fonts/trueno/TruenoBlkOlIt.otf
-  #       - asset: assets/fonts/trueno/TruenoExBd.otf
-  #       - asset: assets/fonts/trueno/TruenoExBdIt.otf
-  #       - asset: assets/fonts/trueno/TruenoExBdOl.otf
-  #       - asset: assets/fonts/trueno/TruenoExBdOlIt.otf
-  #       - asset: assets/fonts/trueno/TruenoLt.otf
-  #       - asset: assets/fonts/trueno/TruenoLtIt.otf
-  #       - asset: assets/fonts/trueno/TruenoRg.otf
-  #       - asset: assets/fonts/trueno/TruenoRgIt.otf
-  #       - asset: assets/fonts/trueno/TruenoSBd.otf
-  #       - asset: assets/fonts/trueno/TruenoSBdIt.otf
-  #       - asset: assets/fonts/trueno/TruenoUltBlk.otf
-  #       - asset: assets/fonts/trueno/TruenoUltBlkIt.otf
-  #       - asset: assets/fonts/trueno/TruenoUltLt.otf
-  #       - asset: assets/fonts/trueno/TruenoUltLtIt.otf
-  #   - family: ActionSans
-  #     fonts:
-  #       - asset: assets/fonts/action-sans/ActionSans-Bold.otf
-  #       - asset: assets/fonts/action-sans/ActionSans-Light.otf
-  #       - asset: assets/fonts/action-sans/ActionSans-Medium.otf
-  #       - asset: assets/fonts/action-sans/ActionSans-Regular.otf
+    - assets/png/
+
+flavorizr:
+  ide: "vscode"
+  app:
+    android:
+      flavorDimensions: "flavor-type"
+
+  flavors:
+    development:
+      app:
+        name: "Prestmit - Dev"
+      android:
+        icon: "assets/png/assets/png/pres_icon.png"
+        applicationId: "dev.com.prestmit"
+      ios:
+        icon: "assets/png/assets/png/pres_icon.png"
+        bundleId: "dev.com.prestmit"
+
+    staging:
+      app:
+        name: "Prestmit - Staging"
+      android:
+        icon: "assets/png/assets/png/pres_icon.png"
+        applicationId: "staging.com.prestmit"
+      ios:
+        icon: "assets/png/assets/png/pres_icon.png"
+        bundleId: "staging.com.prestmit"
+
+    production:
+      app:
+        name: "Prestmit"
+      android:
+        icon: "assets/png/assets/png/pres_icon.png"
+        applicationId: "com.prestmit"
+      ios:
+        icon: "assets/png/assets/png/pres_icon.png"
+        bundleId: "com.prestmit"
