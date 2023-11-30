@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prestmit_app/views/login.dart';
 import 'package:prestmit_app/views/splash_screen.dart';
 
 class PageViewTransition<T> extends MaterialPageRoute<T> {
@@ -39,12 +40,18 @@ class SlideRightRoute extends PageRouteBuilder {
 
 class AppRoute {
   static const String splashscreen = '/splashScreen';
+  static const String loginscreen = '/login';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case splashscreen:
         return PageViewTransition(
           builder: (_) => const SplashScreen(),
+        );
+
+      case loginscreen:
+        return PageViewTransition(
+          builder: (_) => const LoginScreen(),
         );
 
       default:

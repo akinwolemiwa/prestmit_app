@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:prestmit_app/config/routes.dart';
 import 'package:prestmit_app/views/splash_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'flavors.dart';
 
 class App extends StatelessWidget {
@@ -8,14 +10,23 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: F.title,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: F.title,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        onGenerateRoute: (RouteSettings settings) =>
+            AppRoute.generateRoute(settings),
+        home: const SplashScreen(),
       ),
-      onGenerateRoute: (RouteSettings settings) =>
-          AppRoute.generateRoute(settings),
-      home: const SplashScreen(),
     );
   }
 }
