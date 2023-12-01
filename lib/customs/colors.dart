@@ -7,4 +7,5 @@ class MyColors {
   static const Color gold = Color(0xff96823D);
   static const Color grey = Color(0xff424242);
   static const Color lightGrey = Color(0xffE5F0FC);
+  static const Color navGrey = Color(0xffF1F6FB);
 }

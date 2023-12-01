@@ -61,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   route() {
-    Navigator.pushReplacementNamed(context, '/home');
+    Navigator.pushReplacementNamed(context, '/nav');
   }
 
   List<Widget> get _slides => <Widget>[

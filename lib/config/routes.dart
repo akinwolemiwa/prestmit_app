@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:prestmit_app/views/home_screen.dart';
+import 'package:prestmit_app/nav.dart';
+import 'package:prestmit_app/views/home/home_screen.dart';
 import 'package:prestmit_app/views/login.dart';
 import 'package:prestmit_app/views/splash_screen.dart';
 
@@ -42,6 +43,7 @@ class SlideRightRoute extends PageRouteBuilder {
 class AppRoute {
   static const String splashscreen = '/splashScreen';
   static const String loginscreen = '/login';
+  static const String nav = '/nav';
   static const String homescreen = '/home';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -59,6 +61,11 @@ class AppRoute {
       case homescreen:
         return PageViewTransition(
           builder: (_) => const HomeScreen(),
+        );
+
+      case nav:
+        return PageViewTransition(
+          builder: (_) => const Nav(),
         );
 
       default:
