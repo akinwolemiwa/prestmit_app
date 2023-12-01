@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
 import 'package:prestmit_app/customs/colors.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:prestmit_app/views/home/your_orders.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -148,27 +150,37 @@ class _HomeScreenState extends State<HomeScreen> {
                 letterSpacing: 0.5,
               ),
             ),
-            Container(
-              height: 56.h,
-              width: 183.w,
-              decoration: BoxDecoration(
-                color: Colors.black,
-                borderRadius: BorderRadius.circular(52),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Text(
-                    'Your Orders',
-                    style: GoogleFonts.inter(
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.white,
-                      letterSpacing: 0.5,
+            GestureDetector(
+              onTap: () {
+                pushNewScreen(
+                  context,
+                  withNavBar: true,
+                  pageTransitionAnimation: PageTransitionAnimation.fade,
+                  screen: const YourOrders(),
+                );
+              },
+              child: Container(
+                height: 56.h,
+                width: 183.w,
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.circular(52),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text(
+                      'Your Orders',
+                      style: GoogleFonts.inter(
+                        fontSize: 14.sp,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.white,
+                        letterSpacing: 0.5,
+                      ),
                     ),
-                  ),
-                  SvgPicture.asset('assets/svg/arrow.svg')
-                ],
+                    SvgPicture.asset('assets/svg/arrow.svg')
+                  ],
+                ),
               ),
             ),
           ],
