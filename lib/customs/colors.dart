@@ -5,4 +5,6 @@ class MyColors {
   static const Color secondYellow = Color(0xffFFCE23);
   static const Color appBlack = Color(0xff02131E);
   static const Color gold = Color(0xff96823D);
+  static const Color grey = Color(0xff424242);
+  static const Color lightGrey = Color(0xffE5F0FC);
 }

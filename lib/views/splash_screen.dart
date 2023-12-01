@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:prestmit_app/config/routes.dart';
 import 'package:prestmit_app/customs/colors.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -25,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   route() {
-    Navigator.of(context).pushReplacementNamed(AppRoute.loginscreen);
+    Navigator.pushReplacementNamed(context, '/login');
   }
 
   @override
