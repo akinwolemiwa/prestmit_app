@@ -126,7 +126,7 @@ class TrackingDetails extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 16, bottom: 24),
+                      padding: const EdgeInsets.only(top: 0, bottom: 24),
                       child: SvgPicture.asset('assets/svg/line.svg'),
                     ),
                     Row(
