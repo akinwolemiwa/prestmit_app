@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
 import 'package:prestmit_app/customs/colors.dart';
 import 'package:prestmit_app/views/home/tracking_details.dart';
+import 'package:prestmit_app/widgets/app_bar.dart';
 import 'package:prestmit_app/widgets/tracking_widgets.dart';
 
 class YourOrders extends StatelessWidget {
@@ -23,21 +24,7 @@ class YourOrders extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 40, left: 24, right: 24),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const CircleAvatar(
-                  radius: 24,
-                  backgroundImage: NetworkImage(
-                      'https://images.unsplash.com/photo-1587064712555-6e206484699b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGJsYWNrJTIwbWFufGVufDB8fDB8fA%3D%3D&w=1000&q=80'),
-                  backgroundColor: Colors.transparent,
-                ),
-                SvgPicture.asset('assets/svg/notif.svg')
-              ],
-            ),
-          ),
+          const PAppBar(),
           SizedBox(
             height: 24.h,
           ),
