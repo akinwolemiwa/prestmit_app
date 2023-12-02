@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:prestmit_app/nav.dart';
 import 'package:prestmit_app/views/home/home_screen.dart';
+import 'package:prestmit_app/views/home/tracking_details.dart';
 import 'package:prestmit_app/views/home/your_orders.dart';
 import 'package:prestmit_app/views/login.dart';
 import 'package:prestmit_app/views/splash_screen.dart';
@@ -47,6 +48,7 @@ class AppRoute {
   static const String nav = '/nav';
   static const String homescreen = '/home';
   static const String yourOrders = '/yourOrders';
+  static const String trackingDetails = '/trackingDetails';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -73,6 +75,11 @@ class AppRoute {
       case yourOrders:
         return PageViewTransition(
           builder: (_) => const YourOrders(),
+        );
+
+      case trackingDetails:
+        return PageViewTransition(
+          builder: (_) => const TrackingDetails(),
         );
 
       default:

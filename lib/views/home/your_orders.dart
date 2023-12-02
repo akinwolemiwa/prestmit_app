@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
 import 'package:prestmit_app/customs/colors.dart';
+import 'package:prestmit_app/views/home/tracking_details.dart';
 import 'package:prestmit_app/widgets/tracking_widgets.dart';
 
 class YourOrders extends StatelessWidget {
@@ -12,11 +14,11 @@ class YourOrders extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: _buildBody(),
+      body: _buildBody(context),
     );
   }
 
-  Widget _buildBody() {
+  Widget _buildBody(context) {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,7 +54,7 @@ class YourOrders extends StatelessWidget {
           ),
           SizedBox(height: 40.h),
           _package(),
-          _trackingHistory()
+          _trackingHistory(context)
         ],
       ),
     );
@@ -153,7 +155,7 @@ class YourOrders extends StatelessWidget {
     );
   }
 
-  Widget _trackingHistory() {
+  Widget _trackingHistory(context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Column(
@@ -170,7 +172,14 @@ class YourOrders extends StatelessWidget {
           ),
           SizedBox(height: 16.h),
           TrackingWidgets(
-            onPressed: () {},
+            onPressed: () {
+              pushNewScreen(
+                context,
+                withNavBar: false,
+                pageTransitionAnimation: PageTransitionAnimation.fade,
+                screen: const TrackingDetails(),
+              );
+            },
             text: 'SCP9283764526',
             subtext: 'In the process',
             svgs: 'assets/png/process.png',
